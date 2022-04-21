@@ -25,47 +25,36 @@ class Entoku extends Component
         $this->search = null;
     }
 
-    // public function u(){
-        
-
-
-    //     for ($i=0; $i < count(entoku::where('word', 'like', '0-TRIAL-%')->take(51)->get()->toArray()); $i++) { 
-            
-    //         // dump(entoku::where('word', 'like', '0-TRIAL-%')->get()->toArray()[$i]['word'].' '.$i);
-    //         entoku::where('ID', '=', entoku::where('word', 'like', '0-TRIAL-%')->get()->toArray()[$i]['ID'])
-    //         ->update(
-    //             [
-    //                 'word' => entoku::where('word', 'like', '0-TRIAL-%')->get()->toArray()[$i]['word'].' '.$i
-    //             ]
-    //         );
-    //     }
-    // }
-
     public function favorite($id){
-        dd(auth()->check());
-        $favorite = favorite::where('entoku_id',$id)->first();
         
-        if($favorite){
-            $favorite->delete();
+        if (auth()->check()) {
+            $favorite = favorite::where('entoku_id',$id)->first();
+        
+            if($favorite){
+                $favorite->delete();
+            }else{
+                $favorite = new favorite;
+                $favorite->user_id = auth()->user()->id;
+                $favorite->entoku_id = $id;
+                $favorite->save();
+            }
         }else{
-            $favorite = new favorite;
-            $favorite->user_id = auth()->user()->id;
-            $favorite->entoku_id = $id;
-            $favorite->save();
+            // $this->emit('openModal', 'dictionary.alert');
         }
-        
+
     }
 
+    public function textToSearch(){
+        
+    }
 
     public function render()
     {
        
         $count = count(ModelsEntoku::where('word', 'like', $this->search.'%')->paginate($this->limit));
         return view('livewire.dictionary.entoku.entoku', [
-
             // 'entoku' => $count > 0 ? ModelsEntoku::where('word', 'like', '%'.$this->search.'%')->paginate($this->limit) : ModelsEntoku::paginate($this->limit),
             'entoku' => $count > 0 ? ModelsEntoku::with('favorites')->where(DB::raw('lower(word)'), 'like', strtolower($this->search).'%')->orderBy('word','asc')->paginate($this->limit) : ModelsEntoku::paginate($this->limit),
-            // 'entoku' => entoku::where('word', 'like', '%barometer%')->paginate($this->limit),
         ])->extends('layouts.app');
     }
 

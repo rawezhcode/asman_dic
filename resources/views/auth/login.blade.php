@@ -1,67 +1,3 @@
-{{-- <x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
-
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
-            </div>
-
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-            <div class="row mx-gutters-2 mb-4">
-                <div class="col-sm-4">
-                    <a href="{{ route('google.login') }}">
-                        <button type="button" class="btn btn-block btn-google">
-                            <i class="fa fa-google mr-2"></i>Google
-                        </button>
-                    </a>
-                </div>
-            </div>
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout> --}}
 
 <x-guest-layout>
     <div class="relative z-50">
@@ -78,10 +14,11 @@
             
             <x-slot name="logo">
             <div class="text-center">
-                <label class="font-medium text-[50px] Sahel"> 
+                <img class=" opacity-[100%] " src="{{ asset('assets/img/asman2.png') }}" alt="">
+                {{-- <label class="font-medium text-[50px] Sahel"> 
                     <sup class="text-[#d7c9f5]">{{ \Str::after(__('auth.login'), ' ') }}</sup>
                     <sub class="text-[#f58879]">{{ \Str::before(__('auth.login'), ' ') }}</sub>
-                </label>
+                </label> --}}
             </div>
                 <img src="{{ asset('assets/img/login.jpg') }}" alt="">
             </x-slot>

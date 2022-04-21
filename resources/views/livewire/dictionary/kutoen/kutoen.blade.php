@@ -75,7 +75,7 @@
               
           </div>
                
-               <div class="mt-44">
+               <div class="mt-44" >
                 @foreach ($entoku as $item)
                 <div class="collapse w-full mt-3 border rounded-box  text-gray-900 shadow-lg animes" dir="rtl">
                   <input type="checkbox"> 

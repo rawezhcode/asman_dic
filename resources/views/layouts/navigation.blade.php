@@ -22,6 +22,7 @@
                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                                     </svg>
                                 </div>
+                                
                             </button>
                         </x-slot>
     
@@ -34,7 +35,7 @@
 
                 </div>
 
-                <!-- Navigation Links -->
+                {{-- <!-- Navigation Links -->
                 <div class="space-x-8 -my-px ml-1 flex items-center ">
                     <select class="select select-bordered bg-transparent text-gray-800 select-info w-44 max-w-xs">
                         <option>{{ __('words.enToku') }}</option> 
@@ -43,12 +44,14 @@
                         <option>{{ __('words.arToku') }}</option>
                       </select>
 
-                </div>
+                </div> --}}
             </div>
-            {{-- <label class="align-middle items-center flex text-gray-900">{{ __('auth.login') }}</label> --}}
+            <div class="w-52 relative sm:left-[82px]">
+                <img class="opacity-[100%] h-[50px] " src="{{ asset('assets/img/asman.png') }}" alt="">
+            </div>
 
             <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ml-6">
+            <div class="hidden sm:flex sm:items-center sm:ml-6 w-44">
                 @guest
                 <a href="/login" class="flex items-center text-sm font-bold text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                      Signe In
