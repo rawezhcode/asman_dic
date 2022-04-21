@@ -1,7 +1,10 @@
 <div>
 
+  @if (session()->get('lang') == 'En')
   @livewire('dictionary.entoku.entoku')
-  {{-- @livewire('dictionary.kutoen.kutoen') --}}
+  @else
+  @livewire('dictionary.kutoen.kutoen')
+  @endif
   {{-- @livewire('dictionary.artoku.artoku') --}}
   {{-- @livewire('dictionary.kutoar.kutoar') --}}
 

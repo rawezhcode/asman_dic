@@ -44,9 +44,6 @@ class Entoku extends Component
 
     }
 
-    public function textToSearch(){
-        
-    }
 
     public function render()
     {
@@ -54,7 +51,7 @@ class Entoku extends Component
         $count = count(ModelsEntoku::where('word', 'like', $this->search.'%')->paginate($this->limit));
         return view('livewire.dictionary.entoku.entoku', [
             // 'entoku' => $count > 0 ? ModelsEntoku::where('word', 'like', '%'.$this->search.'%')->paginate($this->limit) : ModelsEntoku::paginate($this->limit),
-            'entoku' => $count > 0 ? ModelsEntoku::with('favorites')->where(DB::raw('lower(word)'), 'like', strtolower($this->search).'%')->orderBy('word','asc')->paginate($this->limit) : ModelsEntoku::paginate($this->limit),
+            'entoku' => $count > 0 ? ModelsEntoku::with('favorites')->where(DB::raw('lower(word)'), 'like', strtolower($this->search).'%')->orderBy('id','asc')->paginate($this->limit) : ModelsEntoku::paginate($this->limit),
         ])->extends('layouts.app');
     }
 

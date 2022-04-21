@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Dictionary\Kutoen;
 
+use App\Models\favorite;
 use App\Models\kutoen as ModelsKutoen;
 use Livewire\Component;
 
@@ -22,6 +23,25 @@ class Kutoen extends Component
         $this->search = null;
     }
 
+    
+    public function favorite($id){
+        
+        if (auth()->check()) {
+            $favorite = favorite::where('kutoen_id',$id)->first();
+        
+            if($favorite){
+                $favorite->delete();
+            }else{
+                $favorite = new favorite;
+                $favorite->user_id = auth()->user()->id;
+                $favorite->kutoen_id = $id;
+                $favorite->save();
+            }
+        }else{
+            // $this->emit('openModal', 'dictionary.alert');
+        }
+
+    }
 
 
     public function render()
