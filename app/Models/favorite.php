@@ -25,13 +25,5 @@ class favorite extends Model
     {
         return $this->belongsTo(kutoen::class, 'kutoen_id', 'id');
     }
-    public function kutoar()
-    {
-        return $this->belongsTo(kutoar::class, 'kutoar_id', 'id');
-    }
-    public function artoku()
-    {
-        return $this->belongsTo(artoku::class, 'artoku_id', 'id');
-    }
 
 }
