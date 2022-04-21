@@ -1,0 +1,67 @@
+
+/* import new font */
+
+@font-face {
+    font-family: Sahel;
+    src: url('../fonts/sahel/Sahel.ttf') format('truetype');
+    font-weight: normal;
+  }
+        
+  @font-face {
+    font-family: Sahel;
+    src: url('../fonts/sahel/Sahel-Bold.ttf') format('truetype');
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: Sahel;
+    src: url('../fonts/sahel/Sahel-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+        
+  @font-face {
+    font-family: Sahel;
+    src: url('../fonts/sahel/Sahel-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-family: Sahel;
+    src: url('../fonts/sahel/Sahel-Black.ttf') format('truetype');
+    font-weight: 900;
+  }
+
+
+
+  body{
+    font-family: 'Roboto', "Sahel"  !important;
+    /* src: url('../fonts/sahel/Sahel-Black.ttf'); */
+  }
+
+
+  .Sahel{
+    font-family: 'Roboto', "Sahel" !important;
+  }
+
+  
+ .animes{
+  animation: article-load 300ms ease-in calc(300ms);
+  animation-fill-mode: forwards;
+  /* transform: translateY(-20px); */
+  opacity: 0;
+}
+@keyframes article-load {
+  0% {
+      /* transform: translateY(-20px);
+      opacity: 0; */
+      opacity: 0;
+      transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+  }
+
+  100% {
+      /* transform: translateY(0px);
+      opacity: 1; */
+      opacity: 1;
+      transition-delay: 0s;
+  }
+}
