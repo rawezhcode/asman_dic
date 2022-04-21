@@ -138,7 +138,7 @@
                             @endforeach
                           </div>
                         </p>
-                        <hr class="my-4">
+                        <hr class="my-4e">
                         @endforeach
                         </div>
                     </p>
