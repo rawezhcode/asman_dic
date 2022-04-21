@@ -119,7 +119,7 @@
                        <div class="text-left" dir="ltr">
 
                         @foreach(explode("\n", $item->kurdish_meaning) as $row)
-                        <p class="text-[#f17d6e] text-xl font-bold text-left"> 
+                        <p class="text-[#f17d6e] text-xl font-bold text-left "> 
                           <div class="flex items-center mb-6">
                             <p class="text-[#f17d6e] text-xl font-bold text-left ">
 
@@ -138,6 +138,7 @@
                             @endforeach
                           </div>
                         </p>
+                        <hr class="my-4">
                         @endforeach
                         </div>
                     </p>
