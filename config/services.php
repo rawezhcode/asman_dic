@@ -31,8 +31,8 @@ return [
     ],
     
     'google' => [
-        'client_id' => env('GOOGLE_CLIENT_ID'),
-        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        'client_id' => '304819992897-uj7cq64s1f6pifq2lk03knnovh8inn0m.apps.googleusercontent.com',
+        'client_secret' => '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',
         'redirect' => 'http://phplaravel-762476-2581598.cloudwaysapps.com/google/callback',
     ],
 
