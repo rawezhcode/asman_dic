@@ -121,9 +121,12 @@
                         @foreach(explode("\n", $item->kurdish_meaning) as $row)
                         <p class="text-[#f17d6e] text-xl font-bold text-left"> 
                           <div class="flex items-center mb-6">
-                            {{ Str::title(Str::before($row, '='))  }} :  
+                            <p class="text-[#f17d6e] text-xl font-bold text-left ">
+
+                              {{ Str::title(Str::before($row, '='))  }} :  
+                            </p>
                             
-                            <span onclick="textToSpeech('{{ Str::title(Str::before($row, '='))  }}');" class="flex justify-evenly text-[#FF8181] items-center mr-2 bg-[#6b7280] w-14 h-6 rounded-full" >
+                            <span onclick="textToSpeech('{{ Str::title(Str::before($row, '='))  }}');" class="flex justify-evenly ml-2 text-[#FF8181] items-center mr-2 bg-[#6b7280] w-14 h-6 rounded-full" >
                               <i class="ri-volume-up-fill text-[23px]"></i>
                               <p class="text-white text-[14px]">us</p>
                             </span>
