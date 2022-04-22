@@ -275,18 +275,19 @@
 
 
 function textToSpeech(text) {
+  // responsiveVoice.setDefaultVoice("US English Male");
+  responsiveVoice.speak(text,"US English Male");
+// var synth = window.speechSynthesis;
+// var voices = [];
 
-var synth = window.speechSynthesis;
-var voices = [];
-
-  var toSpeak = new SpeechSynthesisUtterance(text);
-    var selectedVoiceName = 'Microsoft David - English (United States)';
-    voices.forEach((voice)=>{
-        if(voice.name === selectedVoiceName){
-            toSpeak.voice = voice;
-        }
-    });
-    synth.speak(toSpeak);
+//   var toSpeak = new SpeechSynthesisUtterance(text);
+//     var selectedVoiceName = 'Microsoft David - English (United States)';
+//     voices.forEach((voice)=>{
+//         if(voice.name === selectedVoiceName){
+//             toSpeak.voice = voice;
+//         }
+//     });
+//     synth.speak(toSpeak);
 }
 
     </script>
