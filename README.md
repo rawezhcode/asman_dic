@@ -1,5 +1,7 @@
 
 ## Asman Dictionary
+![Screenshot 2022-04-22 173839](https://user-images.githubusercontent.com/53620168/164736846-cc1248e2-3e2f-4795-a43a-c2704793d9fc.png)
+![Screenshot 2022-04-22 173818](https://user-images.githubusercontent.com/53620168/164736865-7502d4a6-3eb8-40e7-8408-4ccde0c976d9.png)
 
 ![1](https://user-images.githubusercontent.com/53620168/164562413-64bca1ac-12dd-4113-b4a5-af015f26ad67.jpg)
 
