@@ -13,7 +13,9 @@ class Home extends Component
     
     public function render()
     {
-
+        if (session()->get('lang') == null) {
+            session()->put('lang', 'En');
+        }
         return view('livewire.dictionary.home')->extends('layouts.app');
     }
 }
