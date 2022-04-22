@@ -14,13 +14,15 @@
         <meta property="og:title" content="Asman Dictionary" />
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ url()->current() }}" />
-        <meta property="og:image" content="{{ asset('assets/img/asman2.png') }}" />
+        <meta property="og:image" content="{{ asset('assets/img/a.png') }}" />
         
         <!-- Twitter -->
         <meta property="twitter:description" content="Asman Dictionary">
         <meta property="twitter:url" content="{{ url()->current() }}">
         <meta property="twitter:title" content="Asman Dictionary">
-        <meta property="twitter:image" content="{{ asset('assets/img/asman2.png') }}">
+        <meta property="twitter:image" content="{{ asset('assets/img/a.png') }}">
+        <meta name="twitter:card" content="summary_large_image">
+
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
