@@ -225,6 +225,8 @@
         </div>
       </div>
 
+
+      <script src="https://code.responsivevoice.org/responsivevoice.js?key=mKxKIREN"></script>
     <script>
         var limit = parseInt({{ $limit }});
         var total = parseInt({{ $entoku->total() }});
