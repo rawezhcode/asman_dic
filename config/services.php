@@ -33,7 +33,7 @@ return [
     'google' => [
         'client_id' => '304819992897-uj7cq64s1f6pifq2lk03knnovh8inn0m.apps.googleusercontent.com',
         'client_secret' => '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',
-        'redirect' => 'http://phplaravel-762476-2581598.cloudwaysapps.com/google/callback',
+        'redirect' => 'http://phplaravel-763292-2585240.cloudwaysapps.com/google/callback',
         // 'redirect' => 'http://127.0.0.1:8000/google/callback',
         // 'client_id' => '304819992897-95tkf0gug8lf041ugg1bla59oo25e0qk.apps.googleusercontent.com',
         // 'client_secret' => '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',
