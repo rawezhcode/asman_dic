@@ -37,6 +37,8 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+
+        <script src="https://code.responsivevoice.org/responsivevoice.js?key=mKxKIREN"></script>
         {{-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> --}}
 
         @livewireStyles
